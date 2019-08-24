@@ -43,6 +43,10 @@ ADD . /opt/openhabcloud
 RUN rm -Rf /opt/openhabcloud/deployment
 RUN rm -Rf /opt/openhabcloud/docs
 RUN rm -Rf /opt/openhabcloud/tests
+RUN rm /opt/openhabcloud/config-development.json
+RUN rm /opt/openhabcloud/config-production.json
+
+RUN chown openhabcloud: /opt/openhabcloud/logs
 
 WORKDIR /opt/openhabcloud
 USER openhabcloud
