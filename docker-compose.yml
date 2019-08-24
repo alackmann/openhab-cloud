@@ -20,7 +20,7 @@ services:
       labels:
       - "traefik.docker.network=ohcloud-network"
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:localhost"
+      - "traefik.frontend.rule=Host:<your-host-name>"
       - "traefik.port=3000"
       - "traefik.protocol=http"
     mongodb:
@@ -31,7 +31,7 @@ services:
       networks:
       - ohcloud-network
       #volumes:
-      #- /home/rancher/myopencloud/mongodb/data:/data/db
+      #- <your local disk path>:/data/db
       restart: always
     redis:
       container_name: redis
@@ -50,11 +50,11 @@ services:
       - internet
       - ohcloud-network
       ports:
-      - "8443:443"
-      - "8888:80"
+      - "443:443"
+      - "80:80"
       - "8080:8080"
       volumes:
-      - ./deployment/docker/traefik.toml:/etc/traefik/traefik.toml
+      - ./traefik.toml:/etc/traefik/traefik.toml
       - /var/run/docker.sock:/var/run/docker.sock
 networks:
   internet:

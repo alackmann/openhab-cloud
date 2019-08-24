@@ -1,9 +1,9 @@
 {
     "system": {
       "host": "localhost",
-      "port": "8443",
+      "port": "443",
       "protocol": "https",
-      "logging" : "audit",
+      "logging" : "info",
       "subDomainCookies": false
     },
     "express":{
