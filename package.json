@@ -8,10 +8,9 @@
     "test": "nyc --reporter=html mocha tests/mocha/unit/**/*.js --recursive",
     "integration_tests": "node tests/ohc_simulator_docker.js & mocha tests/mocha/integration/*.js"
   },
-  "engines" : 
-    { 
-      "node" : ">=8.0.0" 
-    }
+  "engines" : { 
+    "node" : ">=8.0.0" 
+  },
   "dependencies": {
     "apn": "1.7.6",
     "bcrypt": "^3.0.6",
