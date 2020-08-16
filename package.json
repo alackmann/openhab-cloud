@@ -8,12 +8,12 @@
     "test": "nyc --reporter=html mocha tests/mocha/unit/**/*.js --recursive",
     "integration_tests": "node tests/ohc_simulator_docker.js & mocha tests/mocha/integration/*.js"
   },
-  "engines" : { 
-    "node" : ">=8.0.0" 
+  "engines": {
+    "node": ">=8.0.0"
   },
   "dependencies": {
     "apn": "1.7.6",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^3.0.8",
     "bcrypt-cache": "^1.0.2",
     "body-parser": "^1.17.2",
     "chokidar": "0.6.2",
@@ -33,7 +33,6 @@
     "hiredis": "0.5.0",
     "less-middleware": "^3.1.0",
     "lodash": "^4.17.12",
-    "memwatch-next": "0.3.0",
     "method-override": "^2.3.9",
     "moment": "2.20.1",
     "mongoose": "5.7.6",
@@ -55,7 +54,7 @@
     "request": "^2.88.0",
     "serve-favicon": "^2.4.3",
     "serve-static": "^1.12.3",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.3.0",
     "socket.io-client": "^2.2.0",
     "socket.io-redis": "^5.2.0",
     "time": "0.11.4",
